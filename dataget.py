@@ -7,6 +7,7 @@ import time
 
 import math
 import csv
+import sys
 
 #import numpy as np
 #from sklearn.decomposition import PCA
@@ -14,7 +15,7 @@ import csv
 
 import datetime
 
-pass_data = "./data/"
+#pass_data = "./data/"
 
 def senser_get(pass_datatmp):
     pi = pigpio.pi()
@@ -29,13 +30,13 @@ def senser_get(pass_datatmp):
         count = -80
     if count <= 0:
         return(0)
-
+    
     else:
         now_date = datetime.datetime.now()
         now = now_date.strftime("%Y%m%d%H%M")
 
         tP = []
-        file_name= pass_datatmp + str(now) + ".csv"
+        file_name= "./" + pass_datatmp + "/" + str(now) + ".csv"
         fout= open(file_name,"w")
         writer = csv.writer(fout)
 
@@ -57,6 +58,11 @@ def senser_get(pass_datatmp):
 
 if __name__ == "__main__":
 
+    if(len(sys.argv) <= 1):
+        pass_data = "data"
+    else:
+        pass_data = sys.argv[1]
+        
     return_data = senser_get(pass_data)
     if return_data == 0:
         num = 0
