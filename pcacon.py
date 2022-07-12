@@ -9,12 +9,6 @@ import sys
 
 import pathlib as pl
 
-#pass_data = "./data/"
-#kari = "202206291042"
-#format_a = ".csv"
-
-#file_name = pass_data + kari + format_a
-
 keta = 250
 
 
