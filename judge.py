@@ -57,4 +57,4 @@ if __name__ == '__main__':
     else:
         pass_data = sys.argv[1]
 
-     judge_data(pass_lact,pass_data)
+    judge_data(pass_lact,pass_data)
