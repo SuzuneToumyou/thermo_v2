@@ -50,5 +50,4 @@ if __name__ == "__main__":
         pass_data = "data"
     else:
         pass_data = sys.argv[1]
-
     gen_lact(pass_data,pass_out)
