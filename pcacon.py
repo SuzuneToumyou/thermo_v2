@@ -18,7 +18,7 @@ def pca_convert(pass_intmp):
 
     p_temp = pl.Path(pass_intmp2).glob("*.csv")
     for p in p_temp:
-        print(p)
+        #print(p)
 
         csv_file = open(p, encoding="utf-8",  newline="" )
         f = csv.reader(csv_file)
